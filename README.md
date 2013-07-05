@@ -1,4 +1,4 @@
-yii-expression
+php-expression
 ==============
 
-Modest component for cleaning up evaluated PHP expressions.
+Modest library for cleaning up evaluated PHP expressions.
