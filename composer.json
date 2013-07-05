@@ -1,0 +1,14 @@
+{
+    "name": "crisu83/php-expression",
+    "description": "Modest library for cleaning up evaluated PHP expressions.",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Christoffer Niska",
+            "email": "ChristofferNiska@gmail.com"
+        }
+    ],
+    "require": {
+
+    }
+}
