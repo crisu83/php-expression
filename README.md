@@ -1,7 +1,7 @@
 php-expression
 ==============
 
-Modest library for cleaning up evaluated PHP expressions.
+Modest library for safe evaluation of PHP expressions.
 
 ## Usage
 
