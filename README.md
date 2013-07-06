@@ -30,8 +30,13 @@ $exp = new \Crisu83\PhpExpression\Expression($code);
 // so we need to explicitly allow the expression to run the 'foobar' function.
 $exp->setAllowedFunctions(array('foobar'));
 
-// Evaluate the code.
-$result = $exp->evaluate();
+// Evaluate the code and catch any exceptions that occur.
+$result = null;
+try {
+  $result = $exp->evaluate();
+} catch (Exception $e) {
+  // Do whatever you want with the exception, in this example we will just ignore it.
+}
 
 // Output the result which is 'foobar'.
 echo $result;
