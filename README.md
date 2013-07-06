@@ -5,7 +5,7 @@ A modest library for safe evaluation of PHP expressions.
 
 ## Why?
 
-Sometimes you cannot avoid using eval in php, e.g. if you have a rules engine that uses php expressions and its business rules. When you need to use eval you want a safe environment to do so, that's where php-expression comes in. Using php-expression you can safely test your expressions before evaluating them and catch exceptions that may occur. By default php-expression does not allow to use any language constructs or functions, but you can configure it to allow anything you want.
+Sometimes you cannot avoid using eval in php, e.g. if you have a rules engine that uses php expressions and its business rules. When you need to use eval you want a safe environment to do so, that's where php-expression comes in. Using php-expression you can check the syntax and safely test your expressions before evaluating them and catch exceptions that may occur. By default php-expression does not allow to use any language constructs or functions, but you can configure it to allow anything you want.
 
 ## Usage
 
