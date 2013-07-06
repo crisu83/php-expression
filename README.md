@@ -27,7 +27,7 @@ $code = 'return foobar();';
 $exp = new \Crisu83\PhpExpression\Expression($code);
 
 // By default no functions are allowed to be run when evaluating the expression
-// so we need to explicitly allow function of the 'foobar' function.
+// so we need to explicitly allow the expression to run the 'foobar' function.
 $exp->setAllowedFunctions(array('foobar'));
 
 // Evaluate the code.
