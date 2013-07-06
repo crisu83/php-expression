@@ -13,6 +13,7 @@ Sometimes you cannot avoid using eval in php, e.g. if you have a rules engine th
 <?php
 
 // Require the library files.
+// Alternatively you can require it using Composer (http://getcomposer.org/).
 require(__DIR__ . '/path/to/php-expression/Expression.php');
 require(__DIR__ . '/path/to/php-expression/Exception/Fatal.php');
 require(__DIR__ . '/path/to/php-expression/Exception/NotSafe.php');
