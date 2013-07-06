@@ -1,6 +1,6 @@
 {
     "name": "crisu83/php-expression",
-    "description": "Modest library for cleaning up evaluated PHP expressions.",
+    "description": "A modest library for safe evaluation of PHP expressions.",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -9,6 +9,5 @@
         }
     ],
     "require": {
-
     }
 }
