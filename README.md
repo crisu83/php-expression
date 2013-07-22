@@ -20,18 +20,26 @@ require(__DIR__ . '/path/to/php-expression/Exception/NotSafe.php');
 require(__DIR__ . '/path/to/php-expression/Exception/Runtime.php');
 require(__DIR__ . '/path/to/php-expression/Exception/Syntax.php');
 
-// Define an example function that we will evaluate.
-function foobar() {
-  return 'foobar';
+// Define an example class that we will use in this example.
+class Test
+{
+  public function foobar()
+  {
+    return 'foobar';
+  }
 }
 
 // This is code that we will run through the expression object.
-$code = 'return foobar();';
+$code = '$test = new Test; return $test->foobar();';
 
 // Create a new expression for the code above.
 $exp = new \Crisu83\PhpExpression\Expression($code);
 
-// By default no functions are allowed to be run when evaluating the expression
+// By default no classes are allowed to be used when evaluating the expression
+// so we need to explicitly allow the expression to use the 'Test' class.
+$exp->setAllowedClassNames(array('Test'));
+
+// By default no functions are allowed to be called when evaluating the expression
 // so we need to explicitly allow the expression to run the 'foobar' function.
 $exp->setAllowedFunctions(array('foobar'));
 
