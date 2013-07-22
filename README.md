@@ -35,23 +35,24 @@ $code = '$test = new Test; return $test->foobar();';
 // Create a new expression for the code above.
 $exp = new \Crisu83\PhpExpression\Expression($code);
 
-// By default no classes are allowed to be used when evaluating the expression
-// so we need to explicitly allow the expression to use the 'Test' class.
+// Allow the 'new' keyword to be used in the expression.
+$exp->setAllowedKeywords(array('new', 'return'));
+
+// Allow the class 'Test' to be used in the expression.
 $exp->setAllowedClassNames(array('Test'));
 
-// By default no functions are allowed to be called when evaluating the expression
-// so we need to explicitly allow the expression to run the 'foobar' function.
+// Allow the method 'foobar' to be called in the expression.
 $exp->setAllowedFunctions(array('foobar'));
 
-// Evaluate the code and catch any exceptions that occur.
+// Evaluate the code and catch any exceptions that may occur.
 $result = null;
 try {
   $result = $exp->evaluate();
 } catch (Exception $e) {
-  // Do whatever you want with the exception, in this example we will just ignore it.
+  // In this example we just print the error message.
+  echo $e->getMessage();
 }
 
 // Output the result which is 'foobar'.
 echo $result;
-
 ```
